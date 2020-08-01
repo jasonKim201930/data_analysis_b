@@ -12,4 +12,4 @@ police_killing_total = df[["name", "state"]]
 murder_state_total = police_killing_total.groupby('state')["name"].nunique()
 murder_total_df = murder_state_total.to_frame()
 
-murder_total_df.to_csv('/Users/YKim/Documents/BLM/police_killing_2015.csv')
+murder_total_df.to_csv('/Users/YKim/Documents/BLM/police_shooting_2015.csv')
