@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-df = pd.read_csv('/Users/YKim/Documents/BLM/shootings_wash_post.csv')
+df = pd.read_csv('/Users/YKim/Documents/Datamining/BLM/shootings_wash_post.csv')
 
 fig = plt.figure(figsize=(12,5))
 ax=fig.gca()
@@ -13,13 +13,13 @@ monthly = df['date'].groupby(df.date.dt.to_period("M")).agg('count').to_frame(na
 monthly['year'] = monthly['date'].dt.strftime('%Y')
 
 month = []
-for i in monthly.loc[monthly['year'] == '2017']['date']:
+for i in monthly.loc[monthly['year'] == '2015']['date']:
                 month.append(str(i))
 
-plt.bar(month, monthly.loc[monthly['year'] == '2017']['count'], color='#5DADE2')
+plt.bar(month, monthly.loc[monthly['year'] == '2015']['count'], color='#E74C3C')
 
 plt.xlabel('Month')
 plt.ylabel('Number of death')
-plt.title("Cases of Police Killing in 2017")
+plt.title("Cases of Police Killing by Shooting in 2015")
 
 plt.show()

@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-df = pd.read_csv('/Users/YKim/Documents/BLM/shootings_wash_post.csv')
+df = pd.read_csv('/Users/YKim/Documents/Datamining/BLM/shootings_wash_post.csv')
 
 fig = plt.figure(figsize=(12,5))
 ax=fig.gca()
@@ -20,7 +20,6 @@ plt.bar(month, monthly.loc[monthly['year'] == '2020']['count'], color='#F4D03F')
 
 plt.xlabel('Month')
 plt.ylabel('Number of death')
-plt.title("Cases of Police Killing in 2020")
+plt.title("Cases of Police Killing by Shooting in 2020")
 
 plt.show()
-plt.savefigures()
